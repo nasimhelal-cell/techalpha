@@ -3,8 +3,8 @@ import { BsCart3 } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <div className="navbar-bg bg-violet-500 text-violet-50">
-      <div className="navbar container mx-auto flex justify-between items-center h-20">
+    <div className="navbar-bg bg-violet-500 text-violet-50 ">
+      <div className="navbar container mx-auto flex justify-between items-center h-20 ">
         <div className="left">
           <Link to="/" className="logo text-xl font-semibold">
             tech<span className="text-orange-500">Alpha</span>
