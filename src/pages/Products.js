@@ -1,4 +1,4 @@
-import Cart from "./Cart";
+import Card from "../components/Card";
 
 const data = [
   {
@@ -111,7 +111,7 @@ const Products = () => {
       </h2>
       <div className="products-wrapper grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
         {data.map((product) => (
-          <Cart key={product.id} product={product} />
+          <Card key={product.id} product={product} />
         ))}
       </div>
     </div>
