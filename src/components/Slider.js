@@ -72,7 +72,7 @@ const Slider = () => {
         <div className="flex  justify-center gap-10 ">
           <button
             onClick={prevSlide}
-            className="prevBtn h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover: border-orange-50 hover:text-orange-50 duration-300"
+            className="prevBtn h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover:border-orange-50 hover:text-orange-50 duration-300"
           >
             <span>
               <BsArrowLeft />
@@ -81,7 +81,7 @@ const Slider = () => {
 
           <button
             onClick={nextSlide}
-            className="nextBtn  h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover: border-orange-50 hover:text-orange-50 duration-300"
+            className="nextBtn  h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover:border-orange-50 hover:text-orange-50 duration-300"
           >
             <span>
               <BsArrowRight />
