@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import Slide from "./Slide";
 
 const data = [
   {
@@ -36,7 +37,7 @@ const data = [
   },
   {
     id: 5,
-    src: "https://i.ibb.co/YbS7mL2/smart-watches.jpg",
+    src: "https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headline: "Stay connected with smart watches",
     body: "Stay connected and on top of your day with our smart watches. Our selection offers a range of styles and features, including fitness tracking, phone notifications, and voice assistants. These watches are the perfect combination of functionality and style.",
     cta: "Connect with a smart watch",
@@ -44,7 +45,7 @@ const data = [
   },
 ];
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   const prevSlide = () => {
     setCurrentSlide(
@@ -64,18 +65,14 @@ const Slider = () => {
         style={{ transform: `translateX(-${100 * currentSlide}vw)` }}
       >
         {data.map((image) => (
-          <div
-            className="slide"
-            style={{ backgroundImage: `url(${image.src})` }}
-            key={image.id}
-          ></div>
+          <Slide image={image} key={image.id} />
         ))}
       </div>
-      <div className="btns absolute z-[1]  text-gray-50 bottom-20 w-screen ">
+      <div className="btns absolute z-[1]  text-gray-50 bottom-6 w-screen ">
         <div className="flex  justify-center gap-10 ">
           <button
             onClick={prevSlide}
-            className="prevBtn h-14 w-20 text-xl bg-white/40 backdrop-blur-xl flex justify-center items-center hover:bg-white/90 hover:text-black duration-300"
+            className="prevBtn h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover: border-orange-50 hover:text-orange-50 duration-300"
           >
             <span>
               <BsArrowLeft />
@@ -84,7 +81,7 @@ const Slider = () => {
 
           <button
             onClick={nextSlide}
-            className="nextBtn  h-14 w-20 text-xl bg-white/40 backdrop-blur-xl flex justify-center items-center hover:bg-white/90 hover:text-black duration-300"
+            className="nextBtn  h-14 w-20 text-xl bg-violet-500 backdrop-blur-xl flex justify-center items-center hover:bg-violet-700 border border-violet-50 hover: border-orange-50 hover:text-orange-50 duration-300"
           >
             <span>
               <BsArrowRight />

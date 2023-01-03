@@ -6,9 +6,9 @@ const Navbar = () => {
     <div className="navbar-bg bg-violet-500 text-violet-50">
       <div className="navbar container mx-auto flex justify-between items-center h-20">
         <div className="left">
-          <span className="logo text-xl font-semibold">
+          <Link to="/" className="logo text-xl font-semibold">
             tech<span className="text-orange-500">Alpha</span>
-          </span>
+          </Link>
         </div>
         <div className="right flex gap-5 items-center ">
           <Link to="/" className="nav-link duration-300">

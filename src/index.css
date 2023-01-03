@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap');
+
+/* ulitilities */
+.space-font {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -20,12 +28,15 @@ body {
     left: 0;
     width: 100%;
     background-color: #f9fafb;
-    height: 2px;
+    height: 1px;
     transition: 300ms;
     transform-origin: center;
     transform: scaleX(0);
 }
 
+.right {
+    font-weight: 300;
+}
 
 .nav-link:hover:before {
     transform: scaleX(1);
@@ -44,4 +55,29 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* slide cta  */
+.slide-cta {
+    position: relative;
+    z-index: 0;
+
+}
+
+.slide-cta:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f97316;
+    left: 0;
+    z-index: -1;
+    top: 0;
+    transition: 300ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.slide-cta:hover::after {
+    transform: scaleX(1);
 }
