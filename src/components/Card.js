@@ -1,6 +1,17 @@
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addToCart } from "../features/products/cartSlice";
 import { currencyFormatter } from "../utilities/CurrencyFormatter";
 
 const Card = ({ product }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (product) => {
+    dispatch(addToCart(product));
+    navigate("/cart");
+  };
+
   return (
     <div className="product flex flex-col justify-between gap-2 bg-white shadow-lg hover:shadow-2xl duration-300 rounded-xl overflow-hidden">
       <img src={product.image} alt={product.name} />
@@ -18,7 +29,10 @@ const Card = ({ product }) => {
           <span className="product-price text-xl font-medium text-rose-500">
             {currencyFormatter(product.price)}
           </span>
-          <button className="uppercase rounded-md shadow-md shadow-violet-500 hover:shadow-orange-500 bg-violet-500 text-violet-50 hover:bg-orange-500 hover:text-orange-50 font-medium py-3 px-8 duration-300">
+          <button
+            onClick={() => addToCartHandler(product)}
+            className="uppercase rounded-md shadow-md shadow-violet-500 hover:shadow-orange-500 bg-violet-500 text-violet-50 hover:bg-orange-500 hover:text-orange-50 font-medium py-3 px-8 duration-300"
+          >
             Add to cart
           </button>
         </div>
