@@ -5,7 +5,7 @@ const Card = ({ product }) => {
     <div className="product flex flex-col justify-between gap-2 bg-white shadow-lg hover:shadow-2xl duration-300 rounded-xl overflow-hidden">
       <img src={product.image} alt={product.name} />
       <div className="product-texts flex flex-col gap-2 px-3">
-        <span className="category-tag tetxt-xs font-semibold tracking-widest uppercase text-orange-500">
+        <span className="category-tag text-xs font-semibold tracking-widest uppercase text-orange-500">
           {product.category}
         </span>
         <h3 className="product-title font-medium text-lg h-[5.25rem]">
