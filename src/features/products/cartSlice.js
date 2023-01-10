@@ -61,11 +61,27 @@ const cartSlice = createSlice({
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       }
     },
+
+    getSubtalPrice(state, action) {
+      const subtotal = state.cartItems.reduce((acc, item) => {
+        const { price, cartQuantity } = item;
+        const itemTotalPrice = price * cartQuantity;
+        acc += itemTotalPrice;
+        return acc;
+      }, 0);
+
+      state.cartTotalAmout = subtotal;
+    },
   },
 });
 //actions
-export const { addToCart, removeFromCart, clearCart, decreseCartQuantity } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  clearCart,
+  decreseCartQuantity,
+  getSubtalPrice,
+} = cartSlice.actions;
 
 //reducer
 const cartReducer = cartSlice.reducer;
