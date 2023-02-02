@@ -2,6 +2,7 @@
 
 ## Project Description
 TechAlpha is an online e-commerce store built with the latest front-end technologies. The aim of this project is to provide a dynamic and user-friendly shopping experience for customers.
+An online electronics accessories store built with React, Redux, Tailwind CSS, Redux Thunk, and Redux Toolkit. This e-shop allows customers to browse and purchase various electronic accessories such as phone cases, chargers, cables, and more. The user-friendly interface, powered by React, is accompanied by the sleek styling provided by Tailwind CSS. The efficient management of state and asynchronous actions is handled by Redux and its related packages, ensuring a seamless shopping experience for the customer.
 
 ## Project Features
 - Browse and purchase various electronics accessories such as phone cases, chargers, cables, and more.
