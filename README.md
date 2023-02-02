@@ -1,4 +1,4 @@
-# TechAlpha
+# TechAlpha : An electronic accessories store
 
 ## Project Description
 TechAlpha is an online e-commerce store built with the latest front-end technologies. The aim of this project is to provide a dynamic and user-friendly shopping experience for customers.
@@ -21,7 +21,7 @@ An online electronics accessories store built with React, Redux, Tailwind CSS, R
 - Tailwind CSS
 
 ## Installation
-1. Clone this repository: `git clone https://github.com/<repo-url>.git`
+1. Clone this repository: `git clone https://github.com/[user-name]/techalpha.git`
 2. Navigate to the project directory: `cd techalpha`
 3. Install all dependencies: `npm install`
 4. Start the development server: `npm start`
